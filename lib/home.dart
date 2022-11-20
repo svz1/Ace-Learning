@@ -4,6 +4,7 @@ import 'package:demo_app/courses.dart';
 import 'package:demo_app/explore.dart';
 import 'package:demo_app/leaderboard.dart';
 import 'package:demo_app/profile.dart';
+import 'package:demo_app/screens/home_screen.dart';
 import 'package:demo_app/secondpage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -15,6 +16,9 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title:Text("Gamifying Education"),backgroundColor: Color.fromARGB(255, 36, 35, 35),
+        ),
+        body: Center(
+          child: Image(image: NetworkImage("https://thumbs.dreamstime.com/b/e-learning-education-concept-flat-vector-illustration-people-accessing-knowledge-online-library-online-education-books-177859305.jpg")),
         ),
         
         bottomNavigationBar: Container(
@@ -31,7 +35,7 @@ class Home extends StatelessWidget {
               padding: EdgeInsets.all(16),
               tabs: [
               GButton(icon: Icons.book,text: "Courses",
-               onPressed: (){ Navigator.push(context, MaterialPageRoute(builder: ((context) =>courses()))) ;
+               onPressed: (){ Navigator.push(context, MaterialPageRoute(builder: ((context) =>HomeScreen()))) ;
                 
                },
               ),

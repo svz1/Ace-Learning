@@ -1,6 +1,7 @@
 import 'package:demo_app/explore.dart';
 import 'package:demo_app/leaderboard.dart';
 import 'package:demo_app/profile.dart';
+import 'package:demo_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -30,7 +31,7 @@ class courses extends StatelessWidget {
               padding: EdgeInsets.all(16),
               tabs: [
               GButton(icon: Icons.book,text: "Courses",
-               onPressed: (){ Navigator.push(context, MaterialPageRoute(builder: ((context) =>courses()))) ;
+               onPressed: (){ Navigator.push(context, MaterialPageRoute(builder: ((context) =>HomeScreen()))) ;
                 
                },
               ),
